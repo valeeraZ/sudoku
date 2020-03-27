@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3e661a11-d0b5-4bdd-9131-1423556ee195" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1Zg0jjk3tqonBAZOi8WVzRMpe3D" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RunManager" selected="Clojure Application.main">
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <setting name="replType" value="NREPL" />
+      <setting name="execution" value="LEININGEN" />
+      <module name="" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="" />
+      <setting name="fixLineNumbers" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="host" value="" />
+      <setting name="port" value="0" />
+      <setting name="replType" value="SOCKET" />
+      <setting name="configType" value="SPECIFY" />
+      <setting name="fixLineNumbers" value="false" />
+      <module name="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="repl" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <module name="mrsudoku" />
+      <setting name="replType" value="NREPL" />
+      <setting name="execution" value="LEININGEN" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="$PROJECT_DIR$" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="" />
+      <setting name="fixLineNumbers" value="false" />
+      <method v="2">
+        <option name="MakeProject" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ClojureScriptRunConfiguration" factoryName="Clojure Script">
+      <module name="mrsudoku" />
+      <setting name="path" value="" />
+      <setting name="namespace" value="mrsudoku.core" />
+      <setting name="execution" value="LEININGEN" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="ClojureScriptRunConfiguration" factoryName="Clojure Script">
+      <module name="mrsudoku" />
+      <setting name="path" value="" />
+      <setting name="namespace" value="mrsudoku.core" />
+      <setting name="execution" value="LEININGEN" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="midje" type="LeiningenRunConfiguration" factoryName="Leiningen">
+      <module name="mrsudoku" />
+      <arguments argument="midje" />
+      <setting name="profiles" value="" />
+      <setting name="trampoline" value="false" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Clojure Application.main" />
+      <item itemvalue="Clojure REPL.repl" />
+      <item itemvalue="Leiningen.midje" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3e661a11-d0b5-4bdd-9131-1423556ee195" name="Default Changelist" comment="" />
+      <created>1585245566469</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585245566469</updated>
+      <workItem from="1585245568282" duration="2364000" />
+      <workItem from="1585320944223" duration="1023000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="184" y="23" width="1071" height="797" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585246116647">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="184" y="23" width="1071" height="797" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.797@0.23.1440.797" timestamp="1585246116647" />
+    <state width="1398" height="204" key="GridCell.Tab.0.bottom" timestamp="1585256007947">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1398" height="204" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1585256007947" />
+    <state width="1398" height="204" key="GridCell.Tab.0.center" timestamp="1585256007947">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1398" height="204" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1585256007947" />
+    <state width="1398" height="204" key="GridCell.Tab.0.left" timestamp="1585256007946">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1398" height="204" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1585256007946" />
+    <state width="1398" height="204" key="GridCell.Tab.0.right" timestamp="1585256007947">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state width="1398" height="204" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1585256007947" />
+    <state x="500" y="324" key="svn.passwordDialog" timestamp="1585323440760">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="500" y="324" key="svn.passwordDialog/0.23.1440.797/-240.-1057.1920.1057@0.23.1440.797" timestamp="1585323440760" />
+    <state x="558" y="219" key="svn.repositoryBrowser" timestamp="1585323438647">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="558" y="219" key="svn.repositoryBrowser/0.23.1440.797/-240.-1057.1920.1057@0.23.1440.797" timestamp="1585323438647" />
+    <state x="521" y="203" key="svn4idea.import.options" timestamp="1585323301600">
+      <screen x="0" y="23" width="1440" height="797" />
+    </state>
+    <state x="521" y="203" key="svn4idea.import.options/0.23.1440.797/-240.-1057.1920.1057@0.23.1440.797" timestamp="1585323301600" />
+  </component>
+</project>
