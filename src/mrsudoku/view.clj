@@ -85,7 +85,7 @@
   (case (:status cell)
     :conflict (config! cell-widget :background conflict-color) 
     (:set :init :empty) (config! cell-widget :background default-color)
-    :solved (config! cell-widget :backround solved-color :editable? false)
+    :solved (config! cell-widget :background solved-color :editable? false)
     (throw (ex-info "Cannot update cell widget." {:cell cell :cell-widget cell-widget}))))
 
 
