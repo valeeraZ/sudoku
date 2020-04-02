@@ -70,7 +70,8 @@
                                                       :columns 1
                                                       :vgap 20
                                                       :items [(button :text "Load")
-                                                              (button :text "Solve")
+                                                              (button :text "Solve"
+                                                                      :listen [:action (fn [event] ((resolve 'mrsudoku.control/solution-handler) grid ctrl))])
                                                               (button :text "Quit"
                                                                       :listen [:action (fn [event] (System/exit 0))])])
                                                      :fill-v])

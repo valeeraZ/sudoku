@@ -4,8 +4,11 @@
    [mrsudoku.grid :as g]
    [mrsudoku.view :as v]
    [mrsudoku.engine :as e]
+   [mrsudoku.solver :as s]
    [clojure.pprint :as pp]
-   [seesaw.core :refer [alert text! invoke-later select]]))
+   [seesaw.core :refer [alert config! text! invoke-later select]]))
+
+(defmacro dbg [x] `(let [x# ~x] (println "dbg:" '~x "=" x#) x#))
 
 (defn mk-grid-controller
   [grid] (atom {:grid grid}))
@@ -15,6 +18,12 @@
   (invoke-later (v/update-cell-view! cell cell-widget))
   (let [ngrid (:grid (deref ctrl))]
     (println (g/grid->str ngrid))))
+
+(defn solve-cell! [ctrl cx cy cell-widget cell]
+  (println cx cy cell)
+  (swap! ctrl #(assoc % :grid (g/change-cell (:grid %) cx cy cell)))
+  (config! cell-widget :text (:value cell))
+  (invoke-later (v/update-cell-view! cell cell-widget)))
 
 (defn fetch-cell-widget [ctrl cx cy]
   (let [id-widget (keyword (str "#cell-" cx "-" cy))]
@@ -66,5 +75,25 @@
           (cell-clear! ctrl cell-widget cell-x cell-y)
           (invoke-later (text! cell-widget "")))))))
 
+(defn solution-handler [grid ctrl]
+  (let [solution (s/solution grid)]
+    (println "solution:")
+    (println solution)
 
+    (comment (loop [i 1, j 1]
+      (if (< i 10)
+        (if (< j 10)
+          (do
+            (solve-cell! ctrl i j (fetch-cell-widget ctrl i j) (g/cell solution i j))
+            (recur i (inc j)))
+          (recur (inc i) 1))
+        ())))
+
+    ;i don't know why it doesn't work
+    (g/do-grid (fn [cx cy cell]
+                 (when (= (:status cell) :solved)
+                   (solve-cell! ctrl cx cy (fetch-cell-widget ctrl cx cy) cell)))
+               solution)
+    )
+  )
 
