@@ -9,5 +9,6 @@
   :plugins [[lein-midje "3.2.1"]]
   :main ^:skip-aot mrsudoku.core
   :target-path "target/%s"
+  :java-source-paths ["src/sudokugen"]
   :profiles {:uberjar {:aot :all}})
 

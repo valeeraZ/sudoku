@@ -69,7 +69,8 @@
                                                      (grid-panel
                                                       :columns 1
                                                       :vgap 20
-                                                      :items [(button :text "Load")
+                                                      :items [(button :text "Load"
+                                                                      :listen [:action (fn [event] ((resolve 'mrsudoku.control/load-handler) ctrl ))])
                                                               (button :text "Solve"
                                                                       :listen [:action (fn [event] ((resolve 'mrsudoku.control/solution-handler) grid ctrl))])
                                                               (button :text "Quit"
