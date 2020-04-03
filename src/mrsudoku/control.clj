@@ -12,6 +12,8 @@
 (defmacro dbg [x] `(let [x# ~x] (println "dbg:" '~x "=" x#) x#))
 
 (def solved (atom false))
+(declare solution-handler)
+(declare load-handler)
 
 (defn mk-grid-controller
   [grid] (atom {:grid grid}))
@@ -78,14 +80,39 @@
           (cell-clear! ctrl cell-widget cell-x cell-y)
           (invoke-later (text! cell-widget "")))))))
 
+(defn grid-clear [grid ctrl]
+  ;clear the grid
+  (g/do-grid (fn [cx cy cell]
+               (when (not= (:status cell) :init)
+                 (let [cell-widget (fetch-cell-widget ctrl cx cy)]
+                   (doseq [l (.getActionListeners cell-widget)] (.removeActionListener cell-widget l))
+                   )))
+             grid)
+  )
+
 (defn solution-handler [grid ctrl]
   (when (false? @solved)
     (let [solution (s/solution grid)]
       (println "solution:")
       (println solution)
+      ;dispose the entire frame and create a new one
+      (let [grid grid, old-frame (:main-frame (deref ctrl))]
+        (dispose! old-frame)
+        (reset! ctrl {:grid grid})
+        ;(println "ctrl en cours:" ctrl)
+        (let [main-frame (v/mk-main-frame grid ctrl)]
+          (invoke-later
+            (-> main-frame
+                pack!
+                show!))
+          ;(println "ctrl apres:" ctrl)
+          ))
+      ;;fill in the grid
       (g/do-grid (fn [cx cy cell]
                    (when (= (:status cell) :solved)
-                     (solve-cell! ctrl cx cy (fetch-cell-widget ctrl cx cy) cell)))
+                     (let [cell-widget (fetch-cell-widget ctrl cx cy)]
+                       (solve-cell! ctrl cx cy cell-widget cell))
+                     ))
                  solution)
       (reset! solved true))
     )
@@ -106,6 +133,5 @@
       ctrl
       )
     )
-
   )
 
