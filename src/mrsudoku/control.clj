@@ -10,6 +10,7 @@
    [seesaw.core :refer [dispose! show! pack! replace! alert config! text! invoke-later select]]))
 
 (defmacro dbg [x] `(let [x# ~x] (println "dbg:" '~x "=" x#) x#))
+(def solved (atom false))
 
 (declare solution-handler)
 (declare load-handler)
@@ -90,9 +91,9 @@
   )
 
 (defn solution-handler [grid ctrl]
-  (let [solution (s/solution grid)]
-    (println "solution:")
-    (println solution)
+  (when (false? @solved)
+   (let [solution (second (s/solution grid))]
+    ;(println "solution:" solution)
     ;dispose the entire frame and create a new one
     (let [grid grid, old-frame (:main-frame (deref ctrl))]
       (dispose! old-frame)
@@ -112,20 +113,22 @@
                      (solve-cell! ctrl cx cy cell-widget cell))
                    ))
                solution)
-    )
+    (reset! solved true)
+    ))
   )
 (defn load-handler [ctrl]
-  (println "ctrl avant:" ctrl)
+  ;(println "ctrl avant:" ctrl)
+  (reset! solved false)
   (let [grid (gen/generator), old-frame (:main-frame (deref ctrl))]
     (dispose! old-frame)
     (reset! ctrl {:grid grid})
-    (println "ctrl en cours:" ctrl)
+    ;(println "ctrl en cours:" ctrl)
     (let [main-frame (v/mk-main-frame grid ctrl)]
       (invoke-later
         (-> main-frame
             pack!
             show!))
-      (println "ctrl apres:" ctrl)
+      ;(println "ctrl apres:" ctrl)
       ctrl
       )
     )

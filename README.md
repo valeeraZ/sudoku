@@ -8,15 +8,23 @@ Le jeu du Sudoku en mini-projet.
 
 Utiliser `lein run` pour lancer le programme.
 
-## Solveur
+## Solveur: DFS et récursif
 
-En raison d'absence de cours, l'alogorithme SAT n'est pas appliquée.  
-Une fonction naive et recursive est utilisée qui peut-être prendre beaucoup de pile et temps pour certains sudokus difficile...  
+> En raison d'absence de cours, l'alogorithme SAT n'est pas appliquée.  
+
+J'utilise algorithme DFS (Depth-first search) pour résoudre le sudoku. 
+Pour une case non rensignée, le solveur va calculer toutes les réponses (chiffres 1-9) possibles dans une collection.
+Les réponses ne produisent pas conflicts, donc cette case sera remplie avec une réponse parmi eux.
+Le solveur va parcourir toutes les cases.
+- Si on arrive à résoudre toutes les cases (jusqu'à (9,9)), le sudoku est résolu
+- Si pour une case, il n'y a aucune réponse possible, il faut qu'on revienne à l'arrière, 
+et prenne une autre réponse pour la case à l'arrière.
+
 
 ## loader (Générateur)
 
 Un programme open-source en Java est utilisé donc en appuyant sur le bouton "load", un tout nouveau sudoku sera affiché.
-Mais cela ne s'assure pas le contrôle de difficulté.
+Mais cela ne contrôle pas de difficulté de sudoku.
 Lien: [https://qqwing.com/download.html](https://qqwing.com/download.html) 
 
 **Licence du générateur QQWing**
