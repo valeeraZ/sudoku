@@ -1,7 +1,5 @@
 # Mini-projet MrSudoku
 
-Wenzhuo Zhao 3971004
-
 [contact:zslyvain@gmail.com](mailto:zslyvain@gmail.com)
 
 Le jeu du Sudoku en mini-projet.
